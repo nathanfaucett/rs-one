@@ -1,0 +1,4 @@
+rs-one
+=====
+
+one trait
