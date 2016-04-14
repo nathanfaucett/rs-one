@@ -3,4 +3,11 @@ name = "one"
 version = "0.1.0"
 authors = ["nathanfaucett <nathanfaucett@gmail.com>"]
 
+keywords = ["one"]
+description = "one trait"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/nathanfaucett/rs-one.git"
+homepage = "https://github.com/nathanfaucett/rs-one"
+
 [dependencies]
