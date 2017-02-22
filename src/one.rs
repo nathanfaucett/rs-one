@@ -36,3 +36,9 @@ trait_one!(i64);
 
 trait_one_float!(f32);
 trait_one_float!(f64);
+
+
+impl One for bool {
+    #[inline(always)]
+    fn one() -> bool { true }
+}
