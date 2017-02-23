@@ -2,13 +2,16 @@
 
 pub trait One {
     fn one() -> Self;
+    fn is_one(&self) -> bool;
 }
 
 macro_rules! trait_one {
     ($t:ident) => (
         impl One for $t {
             #[inline(always)]
-            fn one() -> $t { 1 }
+            fn one() -> Self { 1 }
+            #[inline(always)]
+            fn is_one(&self) -> bool { *self == 1 }
         }
     );
 }
@@ -17,7 +20,9 @@ macro_rules! trait_one_float {
     ($t:ident) => (
         impl One for $t {
             #[inline(always)]
-            fn one() -> $t { 1.0 }
+            fn one() -> Self { 1.0 }
+            #[inline(always)]
+            fn is_one(&self) -> bool { *self == 1.0 }
         }
     );
 }
@@ -41,4 +46,6 @@ trait_one_float!(f64);
 impl One for bool {
     #[inline(always)]
     fn one() -> bool { true }
+    #[inline(always)]
+    fn is_one(&self) -> bool { *self }
 }
