@@ -9,5 +9,3 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/nathanfaucett/rs-one.git"
 homepage = "https://github.com/nathanfaucett/rs-one"
-
-[dependencies]
